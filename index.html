@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="shortcut icon" href="assets/img/Icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1 class="navbar">BOOKSHELF APPS</h1>
+            </div>
+        </nav>
+    </header>
+
+    <div class="content">
+            <div class="user-information my-container">
+                <h1 class="user-name">"IKA ALFIYAH NOVIANA"</h1>
+                <ul>
+                    <li>
+                      <p>Jumlah Buku</p>
+                      <h3 id="jumlahBuku">0</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="titlebook">
+            <section class="input_section">
+                <h2>MASUKAN BUKU BARU</h2>
+                <form id="inputBook" name="input">
+                    <div class="input">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" autocomplete="off" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit" onclick="myFunction()">Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+                    </button>
+                </form>
+            </section>           
+        </div>
+        <div class="titlebook-search">
+            <section class="search_section">
+                <div class="form_search">
+                    <h2>CARI BUKU (OPSIONAL)</h2>
+                    <form id="searchBook">
+                        <label for="searchBookTitle">Judul</label>
+                        <input id="searchBookTitle" type="text" autocomplete="off">
+                        <button id="searchSubmit" type="submit">Cari</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div class="titlebook-incomplete">
+            <section class="book_shelf">
+                <h2>BELUM SELESAI DIBACA</h2>
+                <div id="incompleteBookshelfList" class="book_list">
+                </div>
+            </section>
+        </div> 
+        <div class="titlebook-complete">
+            <section class="book_shelf">
+                <h2>SELESAI DIBACA</h2>
+                <div id="completeBookshelfList" class="book_list">
+                </div>
+            </section> 
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright By Ika Alfiyah Noviana @ 2022, Dicoding Academy</p>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/storage.js"></script>
+    
+</body>
+</html>
